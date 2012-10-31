@@ -1,0 +1,25 @@
+{
+  "name": "joli",
+  "version": "0.0.0",
+  "description": "Pretty-up those JSON objects.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cpsubrian/joli.git"
+  },
+  "homepage": "https://github.com/cpsubrian/joli",
+  "keywords": [
+    "json",
+    "pretty",
+    "cli"
+  ],
+  "author": "Brian Link <cpsubrian@gmail.com>",
+  "license": "MIT"
+}
