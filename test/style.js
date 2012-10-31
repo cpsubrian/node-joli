@@ -61,8 +61,7 @@ describe('styles', function () {
   });
 
   it('can load local styles', function () {
-    var styles = joli.styles();
-    assert(styles.keys);
+    assert(joli.styles.keys);
   });
 
 });

@@ -1,6 +1,7 @@
 var fs = require('fs')
   , path = require('path')
-  , existsSync = fs.existsSync || path.existsSync;
+  , existsSync = fs.existsSync || path.existsSync
+  , cache = {};
 
 /**
  * Exposes both functional and streaming interfaces.
@@ -11,6 +12,15 @@ var fs = require('fs')
  */
 
 exports.style = function(data, style) {
+  // Accepts array of styles.
+  if (Array.isArray(style)) {
+    style.forEach(function (style) {
+      data = exports.style(data, style);
+    });
+    return data;
+  }
+
+  // Accepts style name.
   if (typeof style === 'string') {
     if (!exports.styles[style]) throw new Error('Style `' + style + '` not found');
     style = exports.styles[style];
@@ -54,10 +64,23 @@ exports.style = function(data, style) {
 exports.stream = function (options) {
   return require('through')(
     function write (data) {
-      var parsed = JSON.parse(data);
-      var styled = exports.style(parsed);
-      var out = options.json ? JSON.stringify(styled, null, 2) : styled;
-      this.emit('data', out);
+      data = JSON.parse(data);
+
+      if (options.style) {
+        data = exports.style(data, style);
+      }
+
+      if (options.styles) {
+        styles.forEach(function (style) {
+          data = exports.style(data, style);
+        });
+      }
+
+      if (options.json) {
+        data = JSON.stringify(data, null, 2);
+      }
+
+      this.emit('data', data);
     },
     function end () {
       this.emit('end');
@@ -86,7 +109,7 @@ exports.stream = function (options) {
  *
  * The name of the style will be determined by its filename.
  */
-exports.styles = loadModules.bind(this, 'styles');
+exports.styles = loadModules.call(this, 'styles');
 
 /**
  * Outputters can be saved and reused.  They can be loaded from the following
@@ -101,12 +124,11 @@ exports.styles = loadModules.bind(this, 'styles');
  * The default 'console' outputter is available and just console.log's the
  * data.
  */
-exports.outputters = loadModules.bind(this, 'outputters');
+exports.outputters = loadModules.call(this, 'outputters');
 
 /**
  * Loads modules in the joli fallback paths.
  */
-var cache = {};
 function loadModules (type) {
   if (!cache[type]) {
     cache[type] = {};
