@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cpsubrian/joli.git"
+    "url": "git://github.com/cpsubrian/node-joli.git"
   },
-  "homepage": "https://github.com/cpsubrian/joli",
+  "homepage": "https://github.com/cpsubrian/node-joli",
   "keywords": [
     "json",
     "pretty",
