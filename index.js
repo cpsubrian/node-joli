@@ -26,7 +26,7 @@ exports.style = function(data, style) {
     }
   }
 
-  // Reduce the data.
+  // Reduce the data, if data is an array.
   if (style.reduce) {
     if (Array.isArray(data)) {
       if (style.reduceInitialValue) {
@@ -86,41 +86,7 @@ exports.stream = function (options) {
  *
  * The name of the style will be determined by its filename.
  */
-var styles = null;
-exports.styles = function () {
-  if (!styles) {
-    styles = {};
-
-    // Load core styles.
-    fs.readdirSync(path.join(__dirname, 'styles')).forEach(function(file) {
-      if (file.match(/\.js$/)) {
-        styles[file.slice(0, -3)] = require(path.join(__dirname, 'styles', file));
-      }
-    });
-
-    // Load styles relative to HOME.
-    var home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
-    var homePath = path.join(home, '.jog', 'styles');
-    if (existsSync(homePath)) {
-      fs.readdirSync(homePath).forEach(function(file) {
-        if (file.match(/\.js$/)) {
-          styles[file.slice(0, -3)] = require(path.join(homePath, file));
-        }
-      });
-    }
-
-    // Load styles relative to CWD.
-    var cwdPath = path.join(process.cwd(), '.jog', 'styles');
-    if (existsSync(cwdPath)) {
-      fs.readdirSync(cwdPath).forEach(function(file) {
-        if (file.match(/\.js$/)) {
-          styles[file.slice(0, -3)] = require(path.join(cwdPath, file));
-        }
-      });
-    }
-  }
-  return styles;
-};
+exports.styles = loadModules.bind(this, 'styles');
 
 /**
  * Outputters can be saved and reused.  They can be loaded from the following
@@ -135,41 +101,34 @@ exports.styles = function () {
  * The default 'console' outputter is available and just console.log's the
  * data.
  */
-var outputters = null;
-exports.outputters = function () {
-  if (!outputters) {
-    outputters = {};
+exports.outputters = loadModules.bind(this, 'outputters');
 
-    // Load core outputters.
-    fs.readdirSync(path.join(__dirname, 'outputters')).forEach(function(file) {
-      if (file.match(/\.js$/)) {
-        outputters[file.slice(0, -3)] = require(path.join(__dirname, 'outputters', file));
-      }
-    });
+/**
+ * Loads modules in the joli fallback paths.
+ */
+var cache = {};
+function loadModules (type) {
+  if (!cache[type]) {
+    cache[type] = {};
+
+    // Load core modules.
+    loadFiles(type, __dirname);
 
     // Load outputters relative to HOME.
-    var home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
-    var homePath = path.join(home, '.jog', 'outputters');
-    if (existsSync(homePath)) {
-      fs.readdirSync(homePath).forEach(function(file) {
-        if (file.match(/\.js$/)) {
-          outputters[file.slice(0, -3)] = require(path.join(homePath, file));
-        }
-      });
-    }
+    loadFiles(type, process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']);
 
     // Load outputters relative to CWD.
-    var cwdPath = path.join(process.cwd(), '.jog', 'outputters');
-    if (existsSync(cwdPath)) {
-      fs.readdirSync(cwdPath).forEach(function(file) {
-        if (file.match(/\.js$/)) {
-          outputters[file.slice(0, -3)] = require(path.join(cwdPath, file));
-        }
-      });
-    }
+    loadFiles(type, process.cwd());
   }
-  return outputters;
-};
-
-
-
+  return cache[type];
+}
+function loadFiles (type, root) {
+  var dir = path.join(root, '.joli', type);
+  if (existsSync(dir)) {
+    fs.readdirSync(dir).forEach(function(file) {
+      if (file.match(/\.js$/)) {
+        cache[type][file.slice(0, -3)] = require(path.join(dir, file));
+      }
+    });
+  }
+}
