@@ -3,7 +3,7 @@ joli
 
 Pretty-up those JSON objects.
 
-[![build status](https://secure.travis-ci.org/cpsubrian/joli.png)](http://travis-ci.org/cpsubrian/joli)
+[![build status](https://secure.travis-ci.org/cpsubrian/node-joli.png)](http://travis-ci.org/cpsubrian/node-joli)
 
 - - -
 
