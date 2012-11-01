@@ -1,0 +1,146 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+  , joli = require('../')
+  , through = require('through')
+  , split = require('split');
+
+// Load package.json.
+var pkg = require('../package.json');
+
+// styles
+var styles = [];
+
+// --map
+program.on('map', function (val) {
+  if (/^[a-z\d.]+$/i.test(val)) val = '_.' + val;
+  styles.push({
+    map: new Function ('_', 'return ' + val)
+  });
+});
+
+// --filter
+program.on('filter', function (val) {
+  if (/^[a-z\d.]+$/i.test(val)) val = '_.' + val;
+  styles.push({
+    filter: new Function ('_', 'return ' + val)
+  });
+});
+
+// --reduce
+var reduce, reduceInitialValue;
+program.on('reduce', function (val) {
+  reduce = Function ('$, _', 'return ' + val);
+});
+
+// examples
+program.on('--help', function() {
+  console.log('  Examples:');
+  console.log();
+  console.log('    # filter slow queries');
+  console.log('    $ tail -n 1000 query.log | joli --filter "_.duration > 300');
+  console.log();
+  console.log('    # total query durations');
+  console.log('    $ tail -n 1000 query.log | joli --map _.duration --reduce "$ + _"');
+  console.log();
+  console.log('    # use a named style');
+  console.log('    $ tail -n 1000 query.log | joli --style updates');
+  console.log();
+});
+
+// setup CLI
+program
+  .version(pkg.version)
+  .option('-n, --newline', 'use if expecting newline-separated JSON objects')
+  .option('-l, --lines', 'output results line-by-line (enables newline mode)')
+  .option('-f, --filter <fn>', 'use the given <fn> for filtering')
+  .option('-m, --map <fn>', 'use the given <fn> for mapping')
+  .option('-r, --reduce <fn>', 'use the given <fn> for reducing. Disabled by --lines.')
+  .option('-s, --style <name>', 'use the <name> style')
+  .option('-o, --output <name>', 'use the <name> outputter')
+  .parse(process.argv);
+
+// --style
+if (program.style) {
+  if (!joli.styles[program.style]) throw new Error('Style `' + program.style + '` not found');
+  var style = joli.styles[program.style];
+
+  // Stash the reduce function.
+  if (style.reduce) {
+    reduce = style.reduce;
+    delete style.reduce;
+  }
+  if (style.reduceInitialValue) {
+    reduceInitialValue = style.rediceInitialValue;
+    delete style.reduceInitialValue;
+  }
+
+  styles.push(style);
+}
+
+// --output
+if (program.output) {
+  if (!joli.outputters[program.output]) throw new Error('Outputter `' + program.output + '` not found');
+  var outputter = joli.outputters[program.output];
+}
+else {
+  var outputter = joli.outputters.console;
+}
+
+// Results.
+var results = [];
+
+// Prepare stdin.
+process.stdin.setEncoding('utf8');
+process.stdin.resume();
+
+// Main stream (might change later)
+var stream = process.stdin;
+
+// --newline
+if (program.newline || program.lines) {
+  stream = stream.pipe(split());
+
+  // --lines
+  if (program.lines) {
+    stream = stream.pipe(joli.stream({style: styles}));
+    stream.on('data', function (data) {
+      outputter(data);
+    });
+  }
+  else {
+    stream.on('data', function (data) {
+      results.push(JSON.parse(data));
+    });
+  }
+}
+else {
+  var buf = '';
+  stream.on('data', function (chunk) {
+    buf += chunk;
+  });
+  stream.on('end', function () {
+    results = JSON.parse(buf);
+  });
+}
+
+// Output buffered results.
+stream.on('end', function () {
+  if (program.lines) return;
+
+  // Apply styles.
+  results = joli.style(results, styles);
+
+  // Reduce.
+  if (reduce) {
+    if (reduceInitialValue) {
+      results = results.reduce(reduce, reduceInitialValue);
+    }
+    else {
+      results = results.reduce(reduce);
+    }
+  }
+
+  // Output.
+  outputter(results);
+});

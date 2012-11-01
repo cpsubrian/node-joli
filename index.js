@@ -64,22 +64,15 @@ exports.style = function(data, style) {
 exports.stream = function (options) {
   return require('through')(
     function write (data) {
-      data = JSON.parse(data);
-
+      if (typeof data === 'string') {
+        data = JSON.parse(data);
+      }
       if (options.style) {
         data = exports.style(data, style);
       }
-
-      if (options.styles) {
-        styles.forEach(function (style) {
-          data = exports.style(data, style);
-        });
-      }
-
       if (options.json) {
         data = JSON.stringify(data, null, 2);
       }
-
       this.emit('data', data);
     },
     function end () {
