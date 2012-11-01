@@ -5,14 +5,89 @@ Pretty-up those JSON objects.
 
 [![build status](https://secure.travis-ci.org/cpsubrian/node-joli.png)](http://travis-ci.org/cpsubrian/node-joli)
 
+Example
+-------
+
+```js
+
+var joli = require('joli');
+
+var data = [
+  {type: 'movie', title: 'Avatar'},
+  {type: 'song', title: 'Master of Puppets'},
+  {type: 'movie', title: 'Ghostbusters'},
+  {type: 'movie', title: 'Jurrasic Park'},
+  {type: 'song', title: 'Rolling in the Deep'}
+];
+
+var style = {
+  filter: function (data) {
+    return data.type === 'movie';
+  },
+  map: function (data) {
+    return data.title;
+  }
+};
+
+/**
+ * Using the functional interface
+ */
+
+var styled = joli.style(data, style);
+
+console.log(styled);
+
+// Will output:
+//
+// [ 'Avatar', 'Ghostbusters', 'Jurrasic Park' ]
+
+
+/**
+ * Using the streaming interface.
+ */
+
+var stream = joli.stream({style: style});
+
+stream.on('data', function (data) {
+  console.log(data);
+});
+
+// Mix and match objects and JSON.
+stream.write('{ "type": "movie", "title": "Avatar" }');
+stream.write({ type: 'song', title: 'Rolling in the Deep' });
+stream.write({ type: 'movie', title: 'Jurrasic Park' });
+
+// Will have outputted:
+//
+// Avatar
+// Jurrasic Park
+
+```
+
 API
 ---
 
+### joli.style (data, style)
+
+Style an object or array of objects by passing them through filter, map, and
+reduce functions. Returns the modified results.
+
+`data` should be an object or array of objects.
+
+`style` should be a style 'hash' or a 'named' style.
+
+See **Styles** below.
+
+### joli.stream (options)
+
+Returns
+
+Styles
+------
 
 
-Examples
---------
-
+Outputters
+----------
 
 
 joli(1)
@@ -61,11 +136,9 @@ data = data.filter(function( _ ) {
 });
 ```
 
-In this way '_' will refer to a json object being filtered.
+Both `--map` and `--filter` can reference `_`.
 
-`--map` and `--filter` both use '_' to reference a record.
-
-`--reduce` is a little special because with it you can use:
+`--reduce` is a little special because with it you can reference:
 
 - `$` - prev value
 - `_` - current value
