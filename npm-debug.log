@@ -1,0 +1,632 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', '-g' ]
+2 info using npm@1.1.62
+3 info using node@v0.8.10
+4 verbose read json /usr/local/lib/package.json
+5 verbose read json /usr/local/lib/package.json
+6 verbose cache add [ '.', null ]
+7 silly cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { pathname: '.', path: '.', href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /Users/cpsubrian/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/tmp.tgz
+14 verbose folder .
+15 info prepublish joli@0.0.1
+16 silly lockFile cf7f5ab3-722-0-053774931002408266-tmp-tgz /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/tmp.tgz
+17 verbose lock /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/tmp.tgz /Users/cpsubrian/.npm/cf7f5ab3-722-0-053774931002408266-tmp-tgz.lock
+18 silly lockFile cf7f5ab3-722-0-053774931002408266-tmp-tgz /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/tmp.tgz
+19 verbose tar unpack /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/tmp.tgz
+20 silly lockFile 09ec8203-722-0-053774931002408266-package /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/package
+21 verbose lock /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/package /Users/cpsubrian/.npm/09ec8203-722-0-053774931002408266-package.lock
+22 silly gunzTarPerm modes [ '755', '644' ]
+23 silly gunzTarPerm extractEntry package.json
+24 silly gunzTarPerm extractEntry .npmignore
+25 silly gunzTarPerm extractEntry README.md
+26 silly gunzTarPerm extractEntry index.js
+27 silly gunzTarPerm extractEntry examples/movies.json
+28 silly gunzTarPerm extractEntry examples/movies.log
+29 silly gunzTarPerm extractEntry .joli/outputters/console.js
+30 silly gunzTarPerm extractEntry .joli/outputters/inspect.js
+31 silly gunzTarPerm extractEntry .joli/outputters/json.js
+32 silly gunzTarPerm extractEntry .joli/styles/keys.js
+33 silly gunzTarPerm extractEntry .joli/styles/values.js
+34 silly gunzTarPerm extractEntry Makefile
+35 silly gunzTarPerm extractEntry .bin/joli
+36 silly gunzTarPerm extractEntry .travis.yml
+37 silly gunzTarPerm extractEntry test/common.js
+38 silly gunzTarPerm extractEntry test/style.js
+39 verbose read json /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/package/package.json
+40 silly lockFile 09ec8203-722-0-053774931002408266-package /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/package
+41 verbose from cache /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/package/package.json
+42 verbose tar pack [ '/Users/cpsubrian/.npm/joli/0.0.1/package.tgz',
+42 verbose tar pack   '/var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/package' ]
+43 verbose tarball /Users/cpsubrian/.npm/joli/0.0.1/package.tgz
+44 verbose folder /var/folders/w9/zylmfzvx63n0sxtvgfbqp4380000gn/T/npm-40563/1351729610722-0.053774931002408266/package
+45 silly lockFile 29748c66-brian-npm-joli-0-0-1-package-tgz /Users/cpsubrian/.npm/joli/0.0.1/package.tgz
+46 verbose lock /Users/cpsubrian/.npm/joli/0.0.1/package.tgz /Users/cpsubrian/.npm/29748c66-brian-npm-joli-0-0-1-package-tgz.lock
+47 silly lockFile 29748c66-brian-npm-joli-0-0-1-package-tgz /Users/cpsubrian/.npm/joli/0.0.1/package.tgz
+48 silly lockFile 8ef003c5-cpsubrian-npm-joli-0-0-1-package /Users/cpsubrian/.npm/joli/0.0.1/package
+49 verbose lock /Users/cpsubrian/.npm/joli/0.0.1/package /Users/cpsubrian/.npm/8ef003c5-cpsubrian-npm-joli-0-0-1-package.lock
+50 silly lockFile 8ef003c5-cpsubrian-npm-joli-0-0-1-package /Users/cpsubrian/.npm/joli/0.0.1/package
+51 verbose tar unpack /Users/cpsubrian/.npm/joli/0.0.1/package.tgz
+52 silly lockFile 8ef003c5-cpsubrian-npm-joli-0-0-1-package /Users/cpsubrian/.npm/joli/0.0.1/package
+53 verbose lock /Users/cpsubrian/.npm/joli/0.0.1/package /Users/cpsubrian/.npm/8ef003c5-cpsubrian-npm-joli-0-0-1-package.lock
+54 silly gunzTarPerm modes [ '755', '644' ]
+55 silly gunzTarPerm extractEntry package.json
+56 silly gunzTarPerm extractEntry .npmignore
+57 silly gunzTarPerm extractEntry README.md
+58 silly gunzTarPerm extractEntry index.js
+59 silly gunzTarPerm extractEntry .bin/joli
+60 silly gunzTarPerm extractEntry .joli/outputters/console.js
+61 silly gunzTarPerm extractEntry .joli/outputters/inspect.js
+62 silly gunzTarPerm extractEntry .joli/outputters/json.js
+63 silly gunzTarPerm extractEntry .joli/styles/keys.js
+64 silly gunzTarPerm extractEntry .joli/styles/values.js
+65 silly gunzTarPerm extractEntry .travis.yml
+66 silly gunzTarPerm extractEntry examples/movies.json
+67 silly gunzTarPerm extractEntry examples/movies.log
+68 silly gunzTarPerm extractEntry Makefile
+69 silly gunzTarPerm extractEntry test/common.js
+70 silly gunzTarPerm extractEntry test/style.js
+71 verbose read json /Users/cpsubrian/.npm/joli/0.0.1/package/package.json
+72 silly lockFile 8ef003c5-cpsubrian-npm-joli-0-0-1-package /Users/cpsubrian/.npm/joli/0.0.1/package
+73 silly shasum updated bytes 4909
+74 info shasum 0e3ab8753bb92976b7de200fbd12344aa96736a9
+74 info shasum /Users/cpsubrian/.npm/joli/0.0.1/package.tgz
+75 verbose from cache /Users/cpsubrian/.npm/joli/0.0.1/package/package.json
+76 verbose chmod /Users/cpsubrian/.npm/joli/0.0.1/package.tgz 644
+77 verbose chown /Users/cpsubrian/.npm/joli/0.0.1/package.tgz [ 501, 20 ]
+78 silly lockFile 3a52ce78- .
+79 silly resolved [ { name: 'joli',
+79 silly resolved     version: '0.0.1',
+79 silly resolved     description: 'Pretty-up those JSON objects.',
+79 silly resolved     main: 'index.js',
+79 silly resolved     dependencies: { through: '~1.1.1', split: '0.1.0', commander: '~1.0.5' },
+79 silly resolved     devDependencies: { mocha: '*' },
+79 silly resolved     scripts: { test: 'make test' },
+79 silly resolved     bin: { joli: './bin/joli' },
+79 silly resolved     repository: { type: 'git', url: 'git://github.com/cpsubrian/node-joli.git' },
+79 silly resolved     homepage: 'https://github.com/cpsubrian/node-joli',
+79 silly resolved     keywords: [ 'json', 'pretty', 'cli' ],
+79 silly resolved     author: { name: 'Brian Link', email: 'cpsubrian@gmail.com' },
+79 silly resolved     license: 'MIT',
+79 silly resolved     readme: 'joli\n====\n\nPretty-up those JSON objects.\n\n[![build status](https://secure.travis-ci.org/cpsubrian/node-joli.png)](http://travis-ci.org/cpsubrian/node-joli)\n\n- - -\n\n### Developed by [Terra Eclipse](http://www.terraeclipse.com)\nTerra Eclipse, Inc. is a nationally recognized political technology and\nstrategy firm located in Aptos, CA and Washington, D.C.\n\n- - -\n\n### License: MIT\n\n- Copyright (C) 2012 Terra Eclipse, Inc. (http://www.terraeclipse.com/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the &quot;Software&quot;), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is furnished\nto do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
+79 silly resolved     _id: 'joli@0.0.1',
+79 silly resolved     dist: { shasum: '0e3ab8753bb92976b7de200fbd12344aa96736a9' },
+79 silly resolved     _from: '.' } ]
+80 info install joli@0.0.1 into /usr/local/lib
+81 info installOne joli@0.0.1
+82 verbose from cache /Users/cpsubrian/.npm/joli/0.0.1/package/package.json
+83 info /usr/local/lib/node_modules/joli unbuild
+84 verbose read json /usr/local/lib/node_modules/joli/package.json
+85 verbose tar unpack /Users/cpsubrian/.npm/joli/0.0.1/package.tgz
+86 silly lockFile 2a757591-usr-local-lib-node-modules-joli /usr/local/lib/node_modules/joli
+87 verbose lock /usr/local/lib/node_modules/joli /Users/cpsubrian/.npm/2a757591-usr-local-lib-node-modules-joli.lock
+88 silly gunzTarPerm modes [ '755', '644' ]
+89 silly gunzTarPerm extractEntry package.json
+90 silly gunzTarPerm extractEntry .npmignore
+91 silly gunzTarPerm extractEntry README.md
+92 silly gunzTarPerm extractEntry index.js
+93 silly gunzTarPerm extractEntry .bin/joli
+94 silly gunzTarPerm extractEntry .joli/outputters/console.js
+95 silly gunzTarPerm extractEntry .joli/outputters/inspect.js
+96 silly gunzTarPerm extractEntry .joli/outputters/json.js
+97 silly gunzTarPerm extractEntry .joli/styles/keys.js
+98 silly gunzTarPerm extractEntry .joli/styles/values.js
+99 silly gunzTarPerm extractEntry .travis.yml
+100 silly gunzTarPerm extractEntry examples/movies.json
+101 silly gunzTarPerm extractEntry examples/movies.log
+102 silly gunzTarPerm extractEntry Makefile
+103 silly gunzTarPerm extractEntry test/common.js
+104 silly gunzTarPerm extractEntry test/style.js
+105 verbose read json /usr/local/lib/node_modules/joli/package.json
+106 silly lockFile 2a757591-usr-local-lib-node-modules-joli /usr/local/lib/node_modules/joli
+107 info preinstall joli@0.0.1
+108 verbose from cache /usr/local/lib/node_modules/joli/package.json
+109 verbose readDependencies using package.json deps
+110 verbose from cache /usr/local/lib/node_modules/joli/package.json
+111 verbose readDependencies using package.json deps
+112 verbose cache add [ 'through@~1.1.1', null ]
+113 silly cache add name=undefined spec="through@~1.1.1" args=["through@~1.1.1",null]
+114 verbose parsed url { pathname: 'through@~1.1.1',
+114 verbose parsed url   path: 'through@~1.1.1',
+114 verbose parsed url   href: 'through@~1.1.1' }
+115 silly cache add name="through" spec="~1.1.1" args=["through","~1.1.1"]
+116 verbose parsed url { pathname: '~1.1.1', path: '~1.1.1', href: '~1.1.1' }
+117 verbose addNamed [ 'through', '~1.1.1' ]
+118 verbose addNamed [ null, '>=1.1.1- <1.2.0-' ]
+119 silly lockFile e2beda42-through-1-1-1 through@~1.1.1
+120 verbose lock through@~1.1.1 /Users/cpsubrian/.npm/e2beda42-through-1-1-1.lock
+121 verbose cache add [ 'split@0.1.0', null ]
+122 silly cache add name=undefined spec="split@0.1.0" args=["split@0.1.0",null]
+123 verbose parsed url { pathname: 'split@0.1.0',
+123 verbose parsed url   path: 'split@0.1.0',
+123 verbose parsed url   href: 'split@0.1.0' }
+124 silly cache add name="split" spec="0.1.0" args=["split","0.1.0"]
+125 verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+126 verbose addNamed [ 'split', '0.1.0' ]
+127 verbose addNamed [ '0.1.0', '0.1.0' ]
+128 silly lockFile b89d8614-split-0-1-0 split@0.1.0
+129 verbose lock split@0.1.0 /Users/cpsubrian/.npm/b89d8614-split-0-1-0.lock
+130 silly addNameRange { name: 'through', range: '>=1.1.1- <1.2.0-', hasData: false }
+131 verbose cache add [ 'commander@~1.0.5', null ]
+132 silly cache add name=undefined spec="commander@~1.0.5" args=["commander@~1.0.5",null]
+133 verbose parsed url { pathname: 'commander@~1.0.5',
+133 verbose parsed url   path: 'commander@~1.0.5',
+133 verbose parsed url   href: 'commander@~1.0.5' }
+134 silly cache add name="commander" spec="~1.0.5" args=["commander","~1.0.5"]
+135 verbose parsed url { pathname: '~1.0.5', path: '~1.0.5', href: '~1.0.5' }
+136 verbose addNamed [ 'commander', '~1.0.5' ]
+137 verbose addNamed [ null, '>=1.0.5- <1.1.0-' ]
+138 silly lockFile c5f7a27c-commander-1-0-5 commander@~1.0.5
+139 verbose lock commander@~1.0.5 /Users/cpsubrian/.npm/c5f7a27c-commander-1-0-5.lock
+140 verbose url raw through
+141 verbose url resolving [ 'https://registry.npmjs.org/', './through' ]
+142 verbose url resolved https://registry.npmjs.org/through
+143 info trying registry request attempt 1 at 17:26:50
+144 verbose etag "5K6H5XK9WLF0RAQIZY2P4A1VA"
+145 http GET https://registry.npmjs.org/through
+146 verbose url raw split/0.1.0
+147 verbose url resolving [ 'https://registry.npmjs.org/', './split/0.1.0' ]
+148 verbose url resolved https://registry.npmjs.org/split/0.1.0
+149 info trying registry request attempt 1 at 17:26:50
+150 verbose etag "D8SD49EPW1O1HCX62WN2U93E1"
+151 http GET https://registry.npmjs.org/split/0.1.0
+152 silly addNameRange { name: 'commander', range: '>=1.0.5- <1.1.0-', hasData: false }
+153 verbose url raw commander
+154 verbose url resolving [ 'https://registry.npmjs.org/', './commander' ]
+155 verbose url resolved https://registry.npmjs.org/commander
+156 info trying registry request attempt 1 at 17:26:50
+157 verbose etag "59UGOBY870YNPGXJNNGBOVQBO"
+158 http GET https://registry.npmjs.org/commander
+159 http 304 https://registry.npmjs.org/through
+160 silly registry.get cb [ 304,
+160 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+160 silly registry.get     etag: '"5K6H5XK9WLF0RAQIZY2P4A1VA"',
+160 silly registry.get     date: 'Thu, 01 Nov 2012 00:26:41 GMT',
+160 silly registry.get     'content-length': '0' } ]
+161 verbose etag through from cache
+162 silly addNameRange number 2 { name: 'through', range: '>=1.1.1- <1.2.0-', hasData: true }
+163 silly addNameRange versions [ 'through',
+163 silly addNameRange   [ '0.0.1',
+163 silly addNameRange     '0.0.2',
+163 silly addNameRange     '0.0.3',
+163 silly addNameRange     '0.0.4',
+163 silly addNameRange     '0.1.0',
+163 silly addNameRange     '0.1.1',
+163 silly addNameRange     '0.1.2',
+163 silly addNameRange     '0.1.3',
+163 silly addNameRange     '0.1.4',
+163 silly addNameRange     '1.0.0',
+163 silly addNameRange     '1.1.0',
+163 silly addNameRange     '1.1.1' ] ]
+164 verbose addNamed [ 'through', '1.1.1' ]
+165 verbose addNamed [ '1.1.1', '1.1.1' ]
+166 silly lockFile 9a04a74b-through-1-1-1 through@1.1.1
+167 verbose lock through@1.1.1 /Users/cpsubrian/.npm/9a04a74b-through-1-1-1.lock
+168 http 304 https://registry.npmjs.org/split/0.1.0
+169 silly registry.get cb [ 304,
+169 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+169 silly registry.get     etag: '"D8SD49EPW1O1HCX62WN2U93E1"',
+169 silly registry.get     date: 'Thu, 01 Nov 2012 00:26:41 GMT',
+169 silly registry.get     'content-length': '0' } ]
+170 verbose etag split/0.1.0 from cache
+171 verbose read json /Users/cpsubrian/.npm/through/1.1.1/package/package.json
+172 silly lockFile 9a04a74b-through-1-1-1 through@1.1.1
+173 silly lockFile e2beda42-through-1-1-1 through@~1.1.1
+174 verbose read json /Users/cpsubrian/.npm/split/0.1.0/package/package.json
+175 http 304 https://registry.npmjs.org/commander
+176 silly registry.get cb [ 304,
+176 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+176 silly registry.get     etag: '"59UGOBY870YNPGXJNNGBOVQBO"',
+176 silly registry.get     date: 'Thu, 01 Nov 2012 00:26:41 GMT',
+176 silly registry.get     'content-length': '0' } ]
+177 verbose etag commander from cache
+178 silly lockFile b89d8614-split-0-1-0 split@0.1.0
+179 silly addNameRange number 2 { name: 'commander', range: '>=1.0.5- <1.1.0-', hasData: true }
+180 silly addNameRange versions [ 'commander',
+180 silly addNameRange   [ '0.0.1',
+180 silly addNameRange     '0.0.3',
+180 silly addNameRange     '0.0.4',
+180 silly addNameRange     '0.0.5',
+180 silly addNameRange     '0.1.0',
+180 silly addNameRange     '0.2.0',
+180 silly addNameRange     '0.2.1',
+180 silly addNameRange     '0.3.0',
+180 silly addNameRange     '0.3.1',
+180 silly addNameRange     '0.3.2',
+180 silly addNameRange     '0.3.3',
+180 silly addNameRange     '0.4.0',
+180 silly addNameRange     '0.4.1',
+180 silly addNameRange     '0.4.2',
+180 silly addNameRange     '0.4.3',
+180 silly addNameRange     '0.5.0',
+180 silly addNameRange     '0.5.1',
+180 silly addNameRange     '0.6.0',
+180 silly addNameRange     '0.6.1',
+180 silly addNameRange     '0.5.2',
+180 silly addNameRange     '1.0.0',
+180 silly addNameRange     '1.0.1',
+180 silly addNameRange     '1.0.2',
+180 silly addNameRange     '1.0.3',
+180 silly addNameRange     '1.0.4',
+180 silly addNameRange     '1.0.5' ] ]
+181 verbose addNamed [ 'commander', '1.0.5' ]
+182 verbose addNamed [ '1.0.5', '1.0.5' ]
+183 silly lockFile c1db8845-commander-1-0-5 commander@1.0.5
+184 verbose lock commander@1.0.5 /Users/cpsubrian/.npm/c1db8845-commander-1-0-5.lock
+185 verbose read json /Users/cpsubrian/.npm/commander/1.0.5/package/package.json
+186 silly lockFile c1db8845-commander-1-0-5 commander@1.0.5
+187 silly lockFile c5f7a27c-commander-1-0-5 commander@~1.0.5
+188 silly resolved [ { name: 'through',
+188 silly resolved     version: '1.1.1',
+188 silly resolved     description: 'simplified stream contruction',
+188 silly resolved     main: 'index.js',
+188 silly resolved     scripts: { test: 'asynct test/*.js' },
+188 silly resolved     devDependencies: { 'stream-spec': '0', assertions: '2', asynct: '1' },
+188 silly resolved     keywords: [ 'stream', 'streams', 'user-streams', 'pipe' ],
+188 silly resolved     author:
+188 silly resolved      { name: 'Dominic Tarr',
+188 silly resolved        email: 'dominic.tarr@gmail.com',
+188 silly resolved        url: 'dominictarr.com' },
+188 silly resolved     license: 'MIT',
+188 silly resolved     repository:
+188 silly resolved      { type: 'git',
+188 silly resolved        url: 'https://github.com/dominictarr/through.git' },
+188 silly resolved     homepage: 'http://github.com/dominictarr/through',
+188 silly resolved     readme: '#through\n\n[![build status](https://secure.travis-ci.org/dominictarr/through.png)](http://travis-ci.org/dominictarr/through)\n\nEasy way to create a `Stream` that is both `readable` and `writable`. Pass in optional `write` and `end` methods. `through` takes care of pause/resume logic.\nUse `this.pause()` and `this.resume()` to manage flow.\nCheck `this.paused` to see current flow state. (write always returns `!this.paused`)\n\nthis function is the basis for most of the syncronous streams in [event-stream](http://github.com/dominictarr/event-stream).\n\n``` js\nvar through = require(\'through\')\n\nthrough(function write(data) {\n    this.emit(\'data\', data)\n    //this.pause() \n  },\n  function end () { //optional\n    this.emit(\'end\')\n  })\n\n```\n\nor, with buffering on pause, use `this.queue(data)`,\ndata *cannot* be `null`. `this.queue(null)` will emit \'end\'\nwhen it gets to the `null` element.\n\n``` js\nvar through = require(\'through\')\n\nthrough(function write(data) {\n    this.queue(data)\n    //this.pause() \n  },\n  function end () { //optional\n    this.queue(null)\n  })\n\n```\n\n\n## License\n\nMIT / Apache2\n',
+188 silly resolved     _id: 'through@1.1.1',
+188 silly resolved     _from: 'through@~1.1.1' },
+188 silly resolved   { name: 'split',
+188 silly resolved     version: '0.1.0',
+188 silly resolved     description: 'split a Text Stream into a Line Stream',
+188 silly resolved     homepage: 'http://github.com/dominictarr/split',
+188 silly resolved     repository: { type: 'git', url: 'git://github.com/dominictarr/split.git' },
+188 silly resolved     dependencies: { through: '0.0.4' },
+188 silly resolved     devDependencies:
+188 silly resolved      { asynct: '*',
+188 silly resolved        'it-is': '1',
+188 silly resolved        ubelt: '~2.9',
+188 silly resolved        'stream-spec': '~0.2',
+188 silly resolved        'event-stream': '~3.0.2' },
+188 silly resolved     scripts: { test: 'asynct test/' },
+188 silly resolved     author:
+188 silly resolved      { name: 'Dominic Tarr',
+188 silly resolved        email: 'dominic.tarr@gmail.com',
+188 silly resolved        url: 'http://bit.ly/dominictarr' },
+188 silly resolved     optionalDependencies: {},
+188 silly resolved     engines: { node: '*' },
+188 silly resolved     readme: '# Split (matcher)\n\n<img src=https://secure.travis-ci.org/dominictarr/split.png?branch=master>\n\nBreak up a stream and reassemble it so that each line is a chunk. matcher may be a `String`, or a `RegExp` \n\nExample, read every line in a file ...\n\n``` js\n  fs.createReadStream(file)\n    .pipe(split())\n    .on(\'data\', function (line) {\n      //each chunk now is a seperate line!\n    })\n\n```\n\n`split` takes the same arguments as `string.split` except it defaults to \'\\n\' instead of \',\', and the optional `limit` paremeter is ignored.\n[String#split](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/split)\n\n',
+188 silly resolved     _id: 'split@0.1.0',
+188 silly resolved     _from: 'split@0.1.0' },
+188 silly resolved   { name: 'commander',
+188 silly resolved     version: '1.0.5',
+188 silly resolved     description: 'the complete solution for node.js command-line programs',
+188 silly resolved     keywords: [ 'command', 'option', 'parser', 'prompt', 'stdin' ],
+188 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+188 silly resolved     repository:
+188 silly resolved      { type: 'git',
+188 silly resolved        url: 'https://github.com/visionmedia/commander.js.git' },
+188 silly resolved     dependencies: { keypress: '0.1.x' },
+188 silly resolved     devDependencies: { should: '>= 0.0.1' },
+188 silly resolved     scripts: { test: 'make test' },
+188 silly resolved     main: 'index',
+188 silly resolved     engines: { node: '>= 0.6.x' },
+188 silly resolved     readme: '# Commander.js\n\n  The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby\'s [commander](https://github.com/visionmedia/commander).\n\n [![Build Status](https://secure.travis-ci.org/visionmedia/commander.js.png)](http://travis-ci.org/visionmedia/commander.js)\n\n## Installation\n\n    $ npm install commander\n\n## Option parsing\n\n Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'commander\');\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-p, --peppers\', \'Add peppers\')\n  .option(\'-P, --pineapple\', \'Add pineapple\')\n  .option(\'-b, --bbq\', \'Add bbq sauce\')\n  .option(\'-c, --cheese [type]\', \'Add the specified type of cheese [marble]\', \'marble\')\n  .parse(process.argv);\n\nconsole.log(\'you ordered a pizza with:\');\nif (program.peppers) console.log(\'  - peppers\');\nif (program.pineapple) console.log(\'  - pineappe\');\nif (program.bbq) console.log(\'  - bbq\');\nconsole.log(\'  - %s cheese\', program.cheese);\n```\n\n Short flags may be passed as a single arg, for example `-abc` is equivalent to `-a -b -c`. Multi-word options such as "--template-engine" are camel-cased, becoming `program.templateEngine` etc.\n\n## Automated --help\n\n The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:\n\n```  \n $ ./examples/pizza --help\n\n   Usage: pizza [options]\n\n   Options:\n\n     -V, --version        output the version number\n     -p, --peppers        Add peppers\n     -P, --pineapple      Add pineappe\n     -b, --bbq            Add bbq sauce\n     -c, --cheese <type>  Add the specified type of cheese [marble]\n     -h, --help           output usage information\n\n```\n\n## Coercion\n\n```js\nfunction range(val) {\n  return val.split(\'..\').map(Number);\n}\n\nfunction list(val) {\n  return val.split(\',\');\n}\n\nprogram\n  .version(\'0.0.1\')\n  .usage(\'[options] <file ...>\')\n  .option(\'-i, --integer <n>\', \'An integer argument\', parseInt)\n  .option(\'-f, --float <n>\', \'A float argument\', parseFloat)\n  .option(\'-r, --range <a>..<b>\', \'A range\', range)\n  .option(\'-l, --list <items>\', \'A list\', list)\n  .option(\'-o, --optional [value]\', \'An optional value\')\n  .parse(process.argv);\n\nconsole.log(\' int: %j\', program.integer);\nconsole.log(\' float: %j\', program.float);\nconsole.log(\' optional: %j\', program.optional);\nprogram.range = program.range || [];\nconsole.log(\' range: %j..%j\', program.range[0], program.range[1]);\nconsole.log(\' list: %j\', program.list);\nconsole.log(\' args: %j\', program.args);\n```\n\n## Custom help\n\n You can display arbitrary `-h, --help` information\n by listening for "--help". Commander will automatically\n exit once you are done so that the remainder of your program\n does not execute causing undesired behaviours, for example\n in the following executable "stuff" will not output when\n `--help` is used.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'../\');\n\nfunction list(val) {\n  return val.split(\',\').map(Number);\n}\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-f, --foo\', \'enable some foo\')\n  .option(\'-b, --bar\', \'enable some bar\')\n  .option(\'-B, --baz\', \'enable some baz\');\n\n// must be before .parse() since\n// node\'s emit() is immediate\n\nprogram.on(\'--help\', function(){\n  console.log(\'  Examples:\');\n  console.log(\'\');\n  console.log(\'    $ custom-help --help\');\n  console.log(\'    $ custom-help -h\');\n  console.log(\'\');\n});\n\nprogram.parse(process.argv);\n\nconsole.log(\'stuff\');\n```\n\nyielding the following help output:\n\n```\n\nUsage: custom-help [options]\n\nOptions:\n\n  -h, --help     output usage information\n  -V, --version  output the version number\n  -f, --foo      enable some foo\n  -b, --bar      enable some bar\n  -B, --baz      enable some baz\n\nExamples:\n\n  $ custom-help --help\n  $ custom-help -h\n\n```\n\n## .prompt(msg, fn)\n\n Single-line prompt:\n\n```js\nprogram.prompt(\'name: \', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Multi-line prompt:\n\n```js\nprogram.prompt(\'description:\', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Coercion:\n\n```js\nprogram.prompt(\'Age: \', Number, function(age){\n  console.log(\'age: %j\', age);\n});\n```\n\n```js\nprogram.prompt(\'Birthdate: \', Date, function(date){\n  console.log(\'date: %s\', date);\n});\n```\n\n## .password(msg[, mask], fn)\n\nPrompt for password without echoing:\n\n```js\nprogram.password(\'Password: \', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\nPrompt for password with mask char "*":\n\n```js\nprogram.password(\'Password: \', \'*\', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\n## .confirm(msg, fn)\n\n Confirm with the given `msg`:\n\n```js\nprogram.confirm(\'continue? \', function(ok){\n  console.log(\' got %j\', ok);\n});\n```\n\n## .choose(list, fn)\n\n Let the user choose from a `list`:\n\n```js\nvar list = [\'tobi\', \'loki\', \'jane\', \'manny\', \'luna\'];\n\nconsole.log(\'Choose the coolest pet:\');\nprogram.choose(list, function(i){\n  console.log(\'you chose %d "%s"\', i, list[i]);\n});\n```\n\n## Links\n\n - [API documentation](http://visionmedia.github.com/commander.js/)\n - [ascii tables](https://github.com/LearnBoost/cli-table)\n - [progress bars](https://github.com/visionmedia/node-progress)\n - [more progress bars](https://github.com/substack/node-multimeter)\n - [examples](https://github.com/visionmedia/commander.js/tree/master/examples)\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+188 silly resolved     _id: 'commander@1.0.5',
+188 silly resolved     _from: 'commander@~1.0.5' } ]
+189 info install through@1.1.1 into /usr/local/lib/node_modules/joli
+190 info install split@0.1.0 into /usr/local/lib/node_modules/joli
+191 info install commander@1.0.5 into /usr/local/lib/node_modules/joli
+192 info installOne through@1.1.1
+193 info installOne split@0.1.0
+194 info installOne commander@1.0.5
+195 verbose from cache /Users/cpsubrian/.npm/through/1.1.1/package/package.json
+196 verbose from cache /Users/cpsubrian/.npm/split/0.1.0/package/package.json
+197 verbose from cache /Users/cpsubrian/.npm/commander/1.0.5/package/package.json
+198 info /usr/local/lib/node_modules/joli/node_modules/through unbuild
+199 verbose read json /usr/local/lib/node_modules/joli/node_modules/through/package.json
+200 info /usr/local/lib/node_modules/joli/node_modules/split unbuild
+201 verbose read json /usr/local/lib/node_modules/joli/node_modules/split/package.json
+202 info /usr/local/lib/node_modules/joli/node_modules/commander unbuild
+203 verbose read json /usr/local/lib/node_modules/joli/node_modules/commander/package.json
+204 verbose tar unpack /Users/cpsubrian/.npm/through/1.1.1/package.tgz
+205 verbose tar unpack /Users/cpsubrian/.npm/split/0.1.0/package.tgz
+206 verbose tar unpack /Users/cpsubrian/.npm/commander/1.0.5/package.tgz
+207 silly lockFile e820fdaa-odules-joli-node-modules-through /usr/local/lib/node_modules/joli/node_modules/through
+208 verbose lock /usr/local/lib/node_modules/joli/node_modules/through /Users/cpsubrian/.npm/e820fdaa-odules-joli-node-modules-through.lock
+209 silly lockFile 35f8f486--modules-joli-node-modules-split /usr/local/lib/node_modules/joli/node_modules/split
+210 verbose lock /usr/local/lib/node_modules/joli/node_modules/split /Users/cpsubrian/.npm/35f8f486--modules-joli-node-modules-split.lock
+211 silly lockFile ac7e6755-ules-joli-node-modules-commander /usr/local/lib/node_modules/joli/node_modules/commander
+212 verbose lock /usr/local/lib/node_modules/joli/node_modules/commander /Users/cpsubrian/.npm/ac7e6755-ules-joli-node-modules-commander.lock
+213 silly gunzTarPerm modes [ '755', '644' ]
+214 silly gunzTarPerm modes [ '755', '644' ]
+215 silly gunzTarPerm modes [ '755', '644' ]
+216 silly gunzTarPerm extractEntry package.json
+217 silly gunzTarPerm extractEntry package.json
+218 silly gunzTarPerm extractEntry index.js
+219 silly gunzTarPerm extractEntry .travis.yml
+220 silly gunzTarPerm extractEntry package.json
+221 silly gunzTarPerm extractEntry .npmignore
+222 silly gunzTarPerm extractEntry LICENCE
+223 silly gunzTarPerm extractEntry .npmignore
+224 silly gunzTarPerm extractEntry index.js
+225 silly gunzTarPerm extractEntry LICENSE.APACHE2
+226 silly gunzTarPerm extractEntry LICENSE.MIT
+227 silly gunzTarPerm extractEntry readme.markdown
+228 silly gunzTarPerm extractEntry index.js
+229 silly gunzTarPerm extractEntry .travis.yml
+230 silly gunzTarPerm extractEntry test/buffering.js
+231 silly gunzTarPerm extractEntry test/end.js
+232 silly gunzTarPerm extractEntry .travis.yml
+233 silly gunzTarPerm extractEntry History.md
+234 silly gunzTarPerm extractEntry examples/pretty.js
+235 silly gunzTarPerm extractEntry readme.markdown
+236 silly gunzTarPerm extractEntry test/index.js
+237 silly gunzTarPerm extractEntry lib/commander.js
+238 silly gunzTarPerm extractEntry Makefile
+239 silly gunzTarPerm extractEntry test/split.asynct.js
+240 silly gunzTarPerm extractEntry Readme.md
+241 verbose read json /usr/local/lib/node_modules/joli/node_modules/split/package.json
+242 silly lockFile 35f8f486--modules-joli-node-modules-split /usr/local/lib/node_modules/joli/node_modules/split
+243 verbose read json /usr/local/lib/node_modules/joli/node_modules/through/package.json
+244 info preinstall split@0.1.0
+245 verbose from cache /usr/local/lib/node_modules/joli/node_modules/split/package.json
+246 silly lockFile e820fdaa-odules-joli-node-modules-through /usr/local/lib/node_modules/joli/node_modules/through
+247 verbose readDependencies using package.json deps
+248 verbose from cache /usr/local/lib/node_modules/joli/node_modules/split/package.json
+249 info preinstall through@1.1.1
+250 verbose from cache /usr/local/lib/node_modules/joli/node_modules/through/package.json
+251 verbose readDependencies using package.json deps
+252 verbose readDependencies using package.json deps
+253 verbose from cache /usr/local/lib/node_modules/joli/node_modules/through/package.json
+254 verbose cache add [ 'through@0.0.4', null ]
+255 silly cache add name=undefined spec="through@0.0.4" args=["through@0.0.4",null]
+256 verbose parsed url { pathname: 'through@0.0.4',
+256 verbose parsed url   path: 'through@0.0.4',
+256 verbose parsed url   href: 'through@0.0.4' }
+257 silly cache add name="through" spec="0.0.4" args=["through","0.0.4"]
+258 verbose parsed url { pathname: '0.0.4', path: '0.0.4', href: '0.0.4' }
+259 verbose addNamed [ 'through', '0.0.4' ]
+260 verbose addNamed [ '0.0.4', '0.0.4' ]
+261 silly lockFile 8075470a-through-0-0-4 through@0.0.4
+262 verbose lock through@0.0.4 /Users/cpsubrian/.npm/8075470a-through-0-0-4.lock
+263 verbose readDependencies using package.json deps
+264 silly resolved []
+265 verbose about to build /usr/local/lib/node_modules/joli/node_modules/through
+266 info build /usr/local/lib/node_modules/joli/node_modules/through
+267 verbose from cache /usr/local/lib/node_modules/joli/node_modules/through/package.json
+268 verbose linkStuff [ true,
+268 verbose linkStuff   '/usr/local/lib/node_modules',
+268 verbose linkStuff   false,
+268 verbose linkStuff   '/usr/local/lib/node_modules/joli/node_modules' ]
+269 info linkStuff through@1.1.1
+270 verbose linkBins through@1.1.1
+271 verbose linkMans through@1.1.1
+272 verbose rebuildBundles through@1.1.1
+273 info install through@1.1.1
+274 info postinstall through@1.1.1
+275 verbose url raw through/0.0.4
+276 verbose url resolving [ 'https://registry.npmjs.org/', './through/0.0.4' ]
+277 verbose url resolved https://registry.npmjs.org/through/0.0.4
+278 info trying registry request attempt 1 at 17:26:51
+279 verbose etag "5K6H5XK9WLF0RAQIZY2P4A1VA"
+280 http GET https://registry.npmjs.org/through/0.0.4
+281 verbose read json /usr/local/lib/node_modules/joli/node_modules/commander/package.json
+282 silly lockFile ac7e6755-ules-joli-node-modules-commander /usr/local/lib/node_modules/joli/node_modules/commander
+283 info preinstall commander@1.0.5
+284 verbose from cache /usr/local/lib/node_modules/joli/node_modules/commander/package.json
+285 verbose readDependencies using package.json deps
+286 verbose from cache /usr/local/lib/node_modules/joli/node_modules/commander/package.json
+287 verbose readDependencies using package.json deps
+288 verbose cache add [ 'keypress@0.1.x', null ]
+289 silly cache add name=undefined spec="keypress@0.1.x" args=["keypress@0.1.x",null]
+290 verbose parsed url { pathname: 'keypress@0.1.x',
+290 verbose parsed url   path: 'keypress@0.1.x',
+290 verbose parsed url   href: 'keypress@0.1.x' }
+291 silly cache add name="keypress" spec="0.1.x" args=["keypress","0.1.x"]
+292 verbose parsed url { pathname: '0.1.x', path: '0.1.x', href: '0.1.x' }
+293 verbose addNamed [ 'keypress', '0.1.x' ]
+294 verbose addNamed [ null, '>=0.1.0- <0.2.0-' ]
+295 silly lockFile a3a73622-keypress-0-1-x keypress@0.1.x
+296 verbose lock keypress@0.1.x /Users/cpsubrian/.npm/a3a73622-keypress-0-1-x.lock
+297 silly addNameRange { name: 'keypress', range: '>=0.1.0- <0.2.0-', hasData: false }
+298 verbose url raw keypress
+299 verbose url resolving [ 'https://registry.npmjs.org/', './keypress' ]
+300 verbose url resolved https://registry.npmjs.org/keypress
+301 info trying registry request attempt 1 at 17:26:51
+302 verbose etag "7HSRXYRVZKPZ33PHZD56K6UO8"
+303 http GET https://registry.npmjs.org/keypress
+304 http 304 https://registry.npmjs.org/keypress
+305 silly registry.get cb [ 304,
+305 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+305 silly registry.get     etag: '"7HSRXYRVZKPZ33PHZD56K6UO8"',
+305 silly registry.get     date: 'Thu, 01 Nov 2012 00:26:41 GMT',
+305 silly registry.get     'content-length': '0' } ]
+306 verbose etag keypress from cache
+307 http 304 https://registry.npmjs.org/through/0.0.4
+308 silly registry.get cb [ 304,
+308 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+308 silly registry.get     etag: '"5K6H5XK9WLF0RAQIZY2P4A1VA"',
+308 silly registry.get     date: 'Thu, 01 Nov 2012 00:26:41 GMT',
+308 silly registry.get     'content-length': '0' } ]
+309 verbose etag through/0.0.4 from cache
+310 silly addNameRange number 2 { name: 'keypress', range: '>=0.1.0- <0.2.0-', hasData: true }
+311 silly addNameRange versions [ 'keypress', [ '0.0.1', '0.0.2', '0.1.0' ] ]
+312 verbose addNamed [ 'keypress', '0.1.0' ]
+313 verbose addNamed [ '0.1.0', '0.1.0' ]
+314 silly lockFile 22598b8c-keypress-0-1-0 keypress@0.1.0
+315 verbose lock keypress@0.1.0 /Users/cpsubrian/.npm/22598b8c-keypress-0-1-0.lock
+316 verbose read json /Users/cpsubrian/.npm/keypress/0.1.0/package/package.json
+317 verbose read json /Users/cpsubrian/.npm/through/0.0.4/package/package.json
+318 silly lockFile 22598b8c-keypress-0-1-0 keypress@0.1.0
+319 silly lockFile 8075470a-through-0-0-4 through@0.0.4
+320 silly lockFile a3a73622-keypress-0-1-x keypress@0.1.x
+321 silly resolved [ { name: 'through',
+321 silly resolved     version: '0.0.4',
+321 silly resolved     description: 'simplified stream contruction',
+321 silly resolved     main: 'index.js',
+321 silly resolved     scripts: { test: 'asynct test/*.js' },
+321 silly resolved     devDependencies: { 'stream-spec': '0', assertions: '2', asynct: '1' },
+321 silly resolved     keywords: [ 'stream', 'streams', 'user-streams', 'pipe' ],
+321 silly resolved     author:
+321 silly resolved      { name: 'Dominic Tarr',
+321 silly resolved        email: 'dominic.tarr@gmail.com',
+321 silly resolved        url: 'dominictarr.com' },
+321 silly resolved     license: 'MIT',
+321 silly resolved     readme: '#through\n\n[![build status](https://secure.travis-ci.org/dominictarr/through.png)](http://travis-ci.org/dominictarr/through)\n\nEasy way to create a `Stream` that is both `readable` and `writable`. Pass in optional `write` and `end` methods. `through` takes care of pause/resume logic.\nUse `this.pause()` and `this.resume()` to manage flow.\nCheck `this.paused` to see current flow state. (write always returns `!this.paused`)\n\nthis function is the basis for most of the syncronous streams in [event-stream](http://github.com/dominictarr/event-stream).\n\n``` js\nvar through = require(\'through\')\n\nthrough(function write(data) {\n    this.emit(\'data\', data)\n    //this.pause() \n  },\n  function end () { //optional\n    this.emit(\'end\')\n  })\n\n```\n\n## License\n\nMIT / Apache2\n',
+321 silly resolved     _id: 'through@0.0.4',
+321 silly resolved     _from: 'through@0.0.4' } ]
+322 info install through@0.0.4 into /usr/local/lib/node_modules/joli/node_modules/split
+323 info installOne through@0.0.4
+324 verbose from cache /Users/cpsubrian/.npm/through/0.0.4/package/package.json
+325 silly resolved [ { name: 'keypress',
+325 silly resolved     version: '0.1.0',
+325 silly resolved     description: 'Make any Node ReadableStream emit "keypress" events',
+325 silly resolved     author:
+325 silly resolved      { name: 'Nathan Rajlich',
+325 silly resolved        email: 'nathan@tootallnate.net',
+325 silly resolved        url: 'http://tootallnate.net' },
+325 silly resolved     main: 'index.js',
+325 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+325 silly resolved     repository:
+325 silly resolved      { type: 'git',
+325 silly resolved        url: 'git://github.com/TooTallNate/keypress.git' },
+325 silly resolved     keywords: [ 'keypress', 'readline', 'core' ],
+325 silly resolved     license: 'MIT',
+325 silly resolved     readme: 'keypress\n========\n### Make any Node ReadableStream emit "keypress" events\n\n\nPrevious to Node `v0.8.x`, there was an undocumented `"keypress"` event that\n`process.stdin` would emit when it was a TTY. Some people discovered this hidden\ngem, and started using it in their own code.\n\nNow in Node `v0.8.x`, this `"keypress"` event does not get emitted by default,\nbut rather only when it is being used in conjuction with the `readline` (or by\nextension, the `repl`) module.\n\nThis module is the exact logic from the node `v0.8.x` releases ripped out into its\nown module.\n\n__Bonus:__ Now with mouse support!\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install keypress\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n#### Listening for "keypress" events\n\n``` js\nvar keypress = require(\'keypress\');\n\n// make `process.stdin` begin emitting "keypress" events\nkeypress(process.stdin);\n\n// listen for the "keypress" event\nprocess.stdin.on(\'keypress\', function (ch, key) {\n  console.log(\'got "keypress"\', key);\n  if (key && key.ctrl && key.name == \'c\') {\n    process.stdin.pause();\n  }\n});\n\nprocess.stdin.setRawMode(true);\nprocess.stdin.resume();\n```\n\n#### Listening for "mousepress" events\n\n``` js\nvar keypress = require(\'keypress\');\n\n// make `process.stdin` begin emitting "mousepress" (and "keypress") events\nkeypress(process.stdin);\n\n// you must enable the mouse events before they will begin firing\nkeypress.enableMouse(process.stdout);\n\nprocess.stdin.on(\'mousepress\', function (info) {\n  console.log(\'got "mousepress" event at %d x %d\', info.x, info.y);\n});\n\nprocess.on(\'exit\', function () {\n  // disable mouse on exit, so that the state\n  // is back to normal for the terminal\n  keypress.disableMouse(process.stdout);\n});\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+325 silly resolved     _id: 'keypress@0.1.0',
+325 silly resolved     _from: 'keypress@0.1.x' } ]
+326 info install keypress@0.1.0 into /usr/local/lib/node_modules/joli/node_modules/commander
+327 info installOne keypress@0.1.0
+328 info /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through unbuild
+329 verbose read json /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through/package.json
+330 verbose from cache /Users/cpsubrian/.npm/keypress/0.1.0/package/package.json
+331 info /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress unbuild
+332 verbose read json /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress/package.json
+333 verbose tar unpack /Users/cpsubrian/.npm/through/0.0.4/package.tgz
+334 silly lockFile 537a8719-dules-split-node-modules-through /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through
+335 verbose lock /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through /Users/cpsubrian/.npm/537a8719-dules-split-node-modules-through.lock
+336 verbose tar unpack /Users/cpsubrian/.npm/keypress/0.1.0/package.tgz
+337 silly lockFile eb9fc54f--commander-node-modules-keypress /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress
+338 verbose lock /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress /Users/cpsubrian/.npm/eb9fc54f--commander-node-modules-keypress.lock
+339 silly gunzTarPerm modes [ '755', '644' ]
+340 silly gunzTarPerm modes [ '755', '644' ]
+341 silly gunzTarPerm extractEntry package.json
+342 silly gunzTarPerm extractEntry package.json
+343 silly gunzTarPerm extractEntry index.js
+344 silly gunzTarPerm extractEntry .travis.yml
+345 silly gunzTarPerm extractEntry README.md
+346 silly gunzTarPerm extractEntry index.js
+347 silly gunzTarPerm extractEntry LICENSE.APACHE2
+348 silly gunzTarPerm extractEntry LICENSE.MIT
+349 silly gunzTarPerm extractEntry test.js
+350 silly gunzTarPerm extractEntry readme.markdown
+351 silly gunzTarPerm extractEntry test/index.js
+352 verbose read json /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress/package.json
+353 silly lockFile eb9fc54f--commander-node-modules-keypress /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress
+354 verbose read json /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through/package.json
+355 info preinstall keypress@0.1.0
+356 verbose from cache /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress/package.json
+357 verbose readDependencies using package.json deps
+358 verbose from cache /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress/package.json
+359 silly lockFile 537a8719-dules-split-node-modules-through /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through
+360 verbose readDependencies using package.json deps
+361 silly resolved []
+362 verbose about to build /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress
+363 info build /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress
+364 verbose from cache /usr/local/lib/node_modules/joli/node_modules/commander/node_modules/keypress/package.json
+365 verbose linkStuff [ true,
+365 verbose linkStuff   '/usr/local/lib/node_modules',
+365 verbose linkStuff   false,
+365 verbose linkStuff   '/usr/local/lib/node_modules/joli/node_modules/commander/node_modules' ]
+366 info linkStuff keypress@0.1.0
+367 verbose linkBins keypress@0.1.0
+368 verbose linkMans keypress@0.1.0
+369 verbose rebuildBundles keypress@0.1.0
+370 info install keypress@0.1.0
+371 info preinstall through@0.0.4
+372 info postinstall keypress@0.1.0
+373 verbose from cache /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through/package.json
+374 verbose about to build /usr/local/lib/node_modules/joli/node_modules/commander
+375 info build /usr/local/lib/node_modules/joli/node_modules/commander
+376 verbose from cache /usr/local/lib/node_modules/joli/node_modules/commander/package.json
+377 verbose linkStuff [ true,
+377 verbose linkStuff   '/usr/local/lib/node_modules',
+377 verbose linkStuff   false,
+377 verbose linkStuff   '/usr/local/lib/node_modules/joli/node_modules' ]
+378 info linkStuff commander@1.0.5
+379 verbose linkBins commander@1.0.5
+380 verbose linkMans commander@1.0.5
+381 verbose rebuildBundles commander@1.0.5
+382 verbose readDependencies using package.json deps
+383 verbose from cache /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through/package.json
+384 verbose rebuildBundles [ 'keypress' ]
+385 info install commander@1.0.5
+386 verbose readDependencies using package.json deps
+387 silly resolved []
+388 verbose about to build /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through
+389 info build /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through
+390 verbose from cache /usr/local/lib/node_modules/joli/node_modules/split/node_modules/through/package.json
+391 info postinstall commander@1.0.5
+392 verbose linkStuff [ true,
+392 verbose linkStuff   '/usr/local/lib/node_modules',
+392 verbose linkStuff   false,
+392 verbose linkStuff   '/usr/local/lib/node_modules/joli/node_modules/split/node_modules' ]
+393 info linkStuff through@0.0.4
+394 verbose linkBins through@0.0.4
+395 verbose linkMans through@0.0.4
+396 verbose rebuildBundles through@0.0.4
+397 info install through@0.0.4
+398 info postinstall through@0.0.4
+399 verbose about to build /usr/local/lib/node_modules/joli/node_modules/split
+400 info build /usr/local/lib/node_modules/joli/node_modules/split
+401 verbose from cache /usr/local/lib/node_modules/joli/node_modules/split/package.json
+402 verbose linkStuff [ true,
+402 verbose linkStuff   '/usr/local/lib/node_modules',
+402 verbose linkStuff   false,
+402 verbose linkStuff   '/usr/local/lib/node_modules/joli/node_modules' ]
+403 info linkStuff split@0.1.0
+404 verbose linkBins split@0.1.0
+405 verbose linkMans split@0.1.0
+406 verbose rebuildBundles split@0.1.0
+407 verbose rebuildBundles [ 'through' ]
+408 info install split@0.1.0
+409 info postinstall split@0.1.0
+410 verbose about to build /usr/local/lib/node_modules/joli
+411 info build /usr/local/lib/node_modules/joli
+412 verbose from cache /usr/local/lib/node_modules/joli/package.json
+413 verbose linkStuff [ true,
+413 verbose linkStuff   '/usr/local/lib/node_modules',
+413 verbose linkStuff   true,
+413 verbose linkStuff   '/usr/local/lib/node_modules' ]
+414 info linkStuff joli@0.0.1
+415 verbose linkBins joli@0.0.1
+416 verbose link bins [ { joli: './bin/joli' }, '/usr/local/bin', true ]
+417 verbose linkMans joli@0.0.1
+418 verbose rebuildBundles joli@0.0.1
+419 verbose rebuildBundles [ 'commander', 'split', 'through' ]
+420 info /usr/local/lib/node_modules/joli unbuild
+421 verbose from cache /usr/local/lib/node_modules/joli/package.json
+422 info preuninstall joli@0.0.1
+423 info uninstall joli@0.0.1
+424 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild joli@0.0.1
+425 verbose /usr/local/bin,[object Object] binRoot
+426 info postuninstall joli@0.0.1
+427 error Error: ENOENT, chmod '/usr/local/lib/node_modules/joli/bin/joli'
+428 error If you need help, you may report this log at:
+428 error     <http://github.com/isaacs/npm/issues>
+428 error or email it to:
+428 error     <npm-@googlegroups.com>
+429 error System Darwin 12.2.0
+430 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g"
+431 error cwd /Users/cpsubrian/projects/node/brian/joli
+432 error node -v v0.8.10
+433 error npm -v 1.1.62
+434 error path /usr/local/lib/node_modules/joli/bin/joli
+435 error code ENOENT
+436 error errno 34
+437 verbose exit [ 34, true ]
