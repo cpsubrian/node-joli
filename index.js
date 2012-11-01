@@ -68,7 +68,7 @@ exports.stream = function (options) {
         data = JSON.parse(data);
       }
       if (options.style) {
-        data = exports.style(data, style);
+        data = exports.style(data, options.style);
       }
       if (options.json) {
         data = JSON.stringify(data, null, 2);

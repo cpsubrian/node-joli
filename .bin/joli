@@ -37,21 +37,24 @@ program.on('reduce', function (val) {
 program.on('--help', function() {
   console.log('  Examples:');
   console.log();
-  console.log('    # filter slow queries');
-  console.log('    $ tail -n 1000 query.log | joli --filter "_.duration > 300');
+  console.log('    Filter slow queries:');
+  console.log('');
+  console.log('      $ tail -n 1000 query.log | joli --filter "_.duration > 300');
   console.log();
-  console.log('    # total query durations');
-  console.log('    $ tail -n 1000 query.log | joli --map _.duration --reduce "$ + _"');
+  console.log('    Total query durations:');
+  console.log('');
+  console.log('      $ tail -n 1000 query.log | joli --map _.duration --reduce "$ + _"');
   console.log();
-  console.log('    # use a named style');
-  console.log('    $ tail -n 1000 query.log | joli --style updates');
+  console.log('    Use a named style:');
+  console.log('');
+  console.log('      $ tail -n 1000 query.log | joli --style keys');
   console.log();
 });
 
 // setup CLI
 program
   .version(pkg.version)
-  .option('-n, --newline', 'use if expecting newline-separated JSON objects')
+  .option('-n, --newline', 'use if input is newline-separated JSON objects')
   .option('-l, --lines', 'output results line-by-line (enables newline mode)')
   .option('-f, --filter <fn>', 'use the given <fn> for filtering')
   .option('-m, --map <fn>', 'use the given <fn> for mapping')
