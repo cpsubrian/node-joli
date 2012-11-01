@@ -30,7 +30,7 @@ program.on('filter', function (val) {
 // --reduce
 var reduce, reduceInitialValue;
 program.on('reduce', function (val) {
-  reduce = Function ('$, _', 'return ' + val);
+  reduce = Function ('$, _, i, a', 'return ' + val);
 });
 
 // examples

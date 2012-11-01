@@ -42,6 +42,36 @@ The joli CLI is inspired by [jog](https://github.com/visionmedia/jog), but is
 specialized for working with stdin/stdout and supports using joli's 'styles'
 and 'outputters'.
 
+**Functions**
+
+When using `--map`, `--filter`, or `--reduce` you are essentialy creating
+functions on the command line.
+
+Consider:
+
+```
+$ joli --map "_.name === 'Brian'"
+```
+
+Has the the eventual effect of:
+
+```js
+data = data.filter(function( _ ) {
+  return _.name === 'Brian';
+});
+```
+
+In this way '_' will refer to a json object being filtered.
+
+`--map` and `--filter` both use '_' to reference a record.
+
+`--reduce` is a little special because with it you can use:
+
+- `$` - prev value
+- `_` - current value
+- `i` - index
+- `a` - the whole array of data objects
+
 **Examples**
 
 View a json file with the 'inspect' outputter:
@@ -87,7 +117,7 @@ $ cat package.json | joli -s keys
   'license' ]
 ```
 
-View a json file with the 'values style':
+View a json file with the 'values' style:
 
 ```
 $ cat package.json | joli -s values
@@ -113,11 +143,6 @@ $ cat package.json | joli --map "'name: ' + _.name + '\nversion: ' + _.version"
 name: joli
 version: 0.0.3
 ```
-
-Examples with jog logs
-----------------------
-
-...
 
 - - -
 
