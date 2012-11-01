@@ -32,7 +32,7 @@ exports.style = function(data, style) {
       data = data.filter(style.filter);
     }
     else if (!style.filter(data)) {
-      data = null;
+      return null;
     }
   }
 
@@ -73,7 +73,9 @@ exports.stream = function (options) {
       if (options.json) {
         data = JSON.stringify(data, null, 2);
       }
-      this.emit('data', data);
+      if (data) {
+        this.emit('data', data);
+      }
     },
     function end () {
       this.emit('end');
