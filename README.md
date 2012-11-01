@@ -72,23 +72,96 @@ API
 Style an object or array of objects by passing them through filter, map, and
 reduce functions. Returns the modified results.
 
-`data` should be an object or array of objects.
-
-`style` should be a style 'hash' or a 'named' style.
+- `data` should be an object or array of objects.
+- `style` should be a style 'hash' or a 'named' style.
 
 See **Styles** below.
 
 ### joli.stream (options)
 
-Returns
+Returns a 'through' stream (Readable/Writable) that processes data written to
+it.
+
+Options:
+
+- `style` - A style 'hash' or the name of a style.
+- `json` - Emit JSON.stringified() results instead of objects.
+
 
 Styles
 ------
 
+The real power of joli (and the reason it was created in the first place) is
+through reusable 'styles'. Styles are just node modules that export an object
+with the following signature:
+
+```
+module.exports = {
+  // Optional. Map function.
+  map: function(data) {
+    return data.type;
+  },
+
+  // Optional. Filter function.
+  filter: function(data) {
+    return data.level === 'error';
+  },
+
+  // Optional. Reduce function.
+  reduce: function(prev, curr, index, array) {
+    // do fancy reduce stuff :)
+  },
+
+  // Optional. Reduce initial value.
+  reduceInitialValue: 'Results: '
+};
+```
+
+Styles can be saved to your location machine or distributed with a project. Both
+the *joli* node api, as well as *joli(1)* will automatically load styles from:
+
+- 'core' styles in `node_modules/joli/.joli/styles`
+- `$HOME/.joli/styles`
+- `$CWD/.joli/styles`
+
+They are loaded in that order, so 'local' styles in your project will override
+'machine' styles in `$HOME/.joli/styles`.
+
+Some example core styles are included and they are:
+
+- `keys` - Maps data to only return the object's keys.
+- `values` - Maps data to only return the object's values.
+
+The 'name' of a style is derived from its filename, minus the `.js`.
 
 Outputters
 ----------
 
+Outputters are primariy used in the CLI, and allow you to customize how, and
+where you want data to be printed. An outputter is just a node module that
+exports a function that accepts data. For example the core 'console' outputter
+looks like:
+
+```js
+module.exports = function (data) {
+  console.log(data);
+};
+```
+
+You could get creative with outputters and do things like produce PNGs, output
+bar-charts to the console, or play music via a MIDI interface.
+
+Outputters are loaded automatically from:
+
+- 'core' outputters in `node_modules/joli/.joli/outputters`
+- `$HOME/.joli/outputters`
+- `$CWM/.joli/outputters`
+
+Some example core outputters are included and they are:
+
+- `console` - Print data with `console.log()`
+- `inspect` - Print data through `util.inspect()`
+- `json` - Print valid JSON with `JSON.stringify()`
 
 joli(1)
 -------
