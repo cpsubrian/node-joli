@@ -126,7 +126,10 @@ else {
     buf += chunk;
   });
   stream.on('end', function () {
-    results = joli.parse(buf);
+    var data = joli.parse(buf);
+    if (data) {
+      results = data;
+    }
   });
 }
 

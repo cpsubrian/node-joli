@@ -67,13 +67,13 @@ exports.stream = function (options) {
       if (typeof data === 'string') {
         data = exports.parse(data);
       }
+      if (data && options.style) {
+        data = exports.style(data, options.style);
+      }
+      if (data && options.json) {
+        data = JSON.stringify(data, null, 2);
+      }
       if (data) {
-        if (options.style) {
-          data = exports.style(data, options.style);
-        }
-        if (options.json) {
-          data = JSON.stringify(data, null, 2);
-        }
         this.emit('data', data);
       }
     },
