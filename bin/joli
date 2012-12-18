@@ -113,7 +113,10 @@ if (program.newline || program.lines) {
   }
   else {
     stream.on('data', function (data) {
-      results.push(JSON.parse(data));
+      data = joli.parse(data);
+      if (data) {
+        results.push(data);
+      }
     });
   }
 }
@@ -123,7 +126,7 @@ else {
     buf += chunk;
   });
   stream.on('end', function () {
-    results = JSON.parse(buf);
+    results = joli.parse(buf);
   });
 }
 

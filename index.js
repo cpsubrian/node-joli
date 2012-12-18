@@ -65,15 +65,15 @@ exports.stream = function (options) {
   return require('through')(
     function write (data) {
       if (typeof data === 'string') {
-        data = JSON.parse(data);
-      }
-      if (options.style) {
-        data = exports.style(data, options.style);
-      }
-      if (options.json) {
-        data = JSON.stringify(data, null, 2);
+        data = exports.parse(data);
       }
       if (data) {
+        if (options.style) {
+          data = exports.style(data, options.style);
+        }
+        if (options.json) {
+          data = JSON.stringify(data, null, 2);
+        }
         this.emit('data', data);
       }
     },
@@ -81,6 +81,28 @@ exports.stream = function (options) {
       this.emit('end');
     }
   );
+};
+
+exports.parse = function (data, fail) {
+  try {
+    return JSON.parse(data);
+  }
+  catch (e) {
+    if (fail) {
+      throw e;
+    }
+    else {
+      // Valid JSON might be surrounded by stuff, try to parse it out.
+      var match = data.match(/\{.*\}/);
+      if (match) {
+        return exports.parse(match[0], true);
+      }
+      // Ignore anything else.
+      else {
+        return null;
+      }
+    }
+  }
 };
 
 /**
