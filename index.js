@@ -95,11 +95,13 @@ exports.parse = function (data, fail) {
       // Valid JSON might be surrounded by stuff, try to parse it out.
       var match = data.match(/\{.*\}/);
       if (match) {
-        return exports.parse(match[0], true);
+        var parsed = exports.parse(match[0], true);
+        parsed._extra = data.split(match[0]);
+        return parsed;
       }
-      // Ignore anything else.
+      // Wrap non-JSON data.
       else {
-        return null;
+        return {text: data};
       }
     }
   }
