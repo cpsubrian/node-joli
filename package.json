@@ -1,6 +1,6 @@
 {
   "name": "joli",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Pretty-up those JSON objects.",
   "main": "index.js",
   "dependencies": {
